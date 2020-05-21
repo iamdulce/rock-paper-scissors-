@@ -1,2 +1,2 @@
 # rock-paper-scissors-
-First time using Javascript to make an simple game. 
+First time using Javascript to make a simple game. 
