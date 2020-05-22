@@ -12,8 +12,10 @@ body{
 header{
   text-align:center; 
   color: white;
+  font-size: 25px;
 }
 
+/* ------------------------------Restart button */
 .btn-container{
   text-align: center;
 }
@@ -23,27 +25,77 @@ header{
   background-color: transparent;
   border-radius: 12px;
   padding: 10px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.restart-btn:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+/* ------------------------------Score board */
 .score{
-  margin: 10% 0 5%;
+  margin: 10% auto 5%;
   text-align: center;
   color: white;
+  border: 3px solid white;
+  text-align: center;
+  width: 250px;
+  font-size: 60px;
+  padding: 30px 10px;
+  position: relative
 }
 
+.badge{
+  background:#c112a0;
+  font-size: 30px;
+  padding: 10px 10px;
+  border-radius: 12px;
+}
+
+#user-badge{
+  position: absolute;
+  top: 20px;
+  left: -50px;
+}
+
+#cpu-badge{
+  position: absolute;
+  top: 20px;
+  right: -65px;
+}
+
+/* ------------------------------Player choices */
 .choices{
   display: flex;
   justify-content: center;
 }
 
 .choices .choice {
-  border: 3px solid white;
+  cursor: pointer;
+  border: 3px solid  #531345;
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
+  border-radius: 40%;
   margin-right: 20px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition: all 0.3s ease;
+}
+
+.choices .choice:hover{
+  cursor: pointer;
+  background: #531345;
+}
+
+.choices .choice img{
+  width: 120px;
 }
 
 h2{
   text-align: center;
   color: white;
+  font-size: 25px;
 }

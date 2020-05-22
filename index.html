@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
   <title>Rock-paper-scissors</title>
 </head>
 <body>
@@ -15,9 +16,8 @@
   </div>
   <div class="score">
     <div id="user-badge" class="badge">User</div>
-    <div id="cpu-badge" class="badge">Cpu</div>
+    <div id="cpu-badge" class="badge">Compu</div>
     <span id="user-score">0</span>:<span id="cpu-score">0</span>
-    <span></span>
   </div>
   <div class="choices">
     <div id="rock" class="choice">
@@ -35,7 +35,10 @@
 
   <!-- Modal -->
   <div class="modal">
-    <h1>You win!</h1>
+    <div class="modal-content">
+      <h1>You win!</h1>
+      <p>Computer choose rock</p>
+    </div>
   </div>
   <script src="js/main.js"></script>
 </body>
