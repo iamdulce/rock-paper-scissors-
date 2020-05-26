@@ -38,7 +38,7 @@ header{
 }
 
 /* ------------------------------Score board */
-.score{
+.score-board{
   margin: 10% auto 5%;
   text-align: center;
   color: white;
@@ -82,7 +82,7 @@ header{
   border-radius: 40%;
   margin-right: 20px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .choices .choice:hover{
@@ -98,4 +98,14 @@ h2{
   text-align: center;
   color: white;
   font-size: 25px;
+}
+
+/* ------------------------------Modal */
+.text-win{
+  color: #289a28;
+  font-size: 40px;
+}
+
+.modal-content p{
+  font-size: 18px;
 }
