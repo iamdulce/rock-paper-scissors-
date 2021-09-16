@@ -1,3 +1,7 @@
+html{
+  font-size: 62.5%;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -7,12 +11,13 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: monospace;
+  font-size: 1.6rem;
 }
 
 header{
   text-align:center; 
   color: white;
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 /* ------------------------------Restart button */
@@ -20,13 +25,13 @@ header{
   text-align: center;
 }
 
-.restart-btn {
+.restart-btn{
   color: white;
   background-color: transparent;
   border-radius: 12px;
   padding: 10px 10px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -43,16 +48,15 @@ header{
   text-align: center;
   color: white;
   border: 3px solid white;
-  text-align: center;
   width: 250px;
-  font-size: 60px;
+  font-size: 6rem;
   padding: 30px 10px;
   position: relative
 }
 
 .badge{
   background:#c112a0;
-  font-size: 30px;
+  font-size: 3rem;
   padding: 10px 10px;
   border-radius: 12px;
 }
@@ -75,7 +79,7 @@ header{
   justify-content: center;
 }
 
-.choices .choice {
+.choices .choice{
   cursor: pointer;
   border: 3px solid  #531345;
   background-color: rgba(255, 255, 255, 0.3);
@@ -97,20 +101,20 @@ header{
 h2{
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 /* ------------------------------Modal */
 .text-win{
   color: #289a28;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .text-lose{
   color: #ff0000;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .modal-content p{
-  font-size: 18px;
+  font-size: 1.8rem;
 }
