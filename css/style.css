@@ -15,7 +15,7 @@ body{
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -164,5 +164,16 @@ h2{
   }
   .badge{
     font-size: 2rem;
+  }
+
+  /* --------------Score board */
+  .text-win{
+    font-size: 3rem;
+  }
+  .text-lose{
+    font-size: 3rem;
+  }
+  .modal-content p{
+    font-size: 1.5rem;
   }
 }
