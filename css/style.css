@@ -1,18 +1,34 @@
-body{
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-color: #140330;
   font-family: monospace;
+  font-size: 1.6rem;
+  padding: 30px 0;
 }
 
 header{
   text-align:center; 
   color: white;
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 /* ------------------------------Restart button */
@@ -20,15 +36,16 @@ header{
   text-align: center;
 }
 
-.restart-btn {
+.restart-btn{
   color: white;
   background-color: transparent;
   border-radius: 12px;
   padding: 10px 10px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 30px;
 }
 
 .restart-btn:hover{
@@ -39,50 +56,51 @@ header{
 
 /* ------------------------------Score board */
 .score-board{
-  margin: 10% auto 5%;
+  margin: 8% 0 4%;
   text-align: center;
   color: white;
   border: 3px solid white;
-  text-align: center;
   width: 250px;
-  font-size: 60px;
+  font-size: 6rem;
   padding: 30px 10px;
   position: relative
 }
 
 .badge{
   background:#c112a0;
-  font-size: 30px;
+  font-size: 3rem;
   padding: 10px 10px;
   border-radius: 12px;
 }
 
 #user-badge{
   position: absolute;
-  top: 20px;
-  left: -50px;
+  left: -40px;
 }
 
 #cpu-badge{
   position: absolute;
-  top: 20px;
-  right: -65px;
+  right: -55px;
 }
 
 /* ------------------------------Player choices */
 .choices{
   display: flex;
   justify-content: center;
+  margin: 20px 0 25px;
 }
 
-.choices .choice {
+.choices .choice{
   cursor: pointer;
   border: 3px solid  #531345;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 40%;
-  margin-right: 20px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   transition: all 0.1s ease;
+}
+
+.choices .choice:nth-child(2){
+  margin: 0 20px;
 }
 
 .choices .choice:hover{
@@ -91,26 +109,71 @@ header{
 }
 
 .choices .choice img{
-  width: 120px;
+  width: 100%;
 }
 
 h2{
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 /* ------------------------------Modal */
 .text-win{
   color: #289a28;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .text-lose{
   color: #ff0000;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .modal-content p{
-  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* ------------------------------Media Queries */
+
+@media screen and (max-width: 480px){
+  body{
+    padding: 0 22px;
+  }
+  .title{
+    font-size: 3.5rem;
+  }
+
+  /* --------------Restart button */
+  .restart-btn{
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  /* --------------Player choices */
+  .choices .choice:nth-child(2){
+    margin: 0 10px;
+  }
+  h2{
+    font-size: 2rem;
+  }
+
+  /* --------------Score board */
+  .score-board{
+    font-size: 5rem;
+    width: 180px;
+  }
+  .badge{
+    font-size: 2rem;
+  }
+
+  /* --------------Score board */
+  .text-win{
+    font-size: 3rem;
+  }
+  .text-lose{
+    font-size: 3rem;
+  }
+  .modal-content p{
+    font-size: 1.5rem;
+  }
 }

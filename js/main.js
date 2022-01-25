@@ -1,5 +1,6 @@
 let userScore = 0;
 let cpuScore = 0;
+let closeBtn;
 const userScore_span = document.getElementById("user-score");
 const cpuScore_span = document.getElementById("cpu-score");
 // const scoreBoard_div = document.getElementById(".score-board")
@@ -22,7 +23,7 @@ function win(userChoice, cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1 class="text-win">You win!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`;
+  result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`;
   modal.style.display = 'block';
 }
 
@@ -30,14 +31,14 @@ function lose(userChoice, cpuChoice){
   cpuScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`; 
+  result.innerHTML = `<span class="close"></span> <h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`; 
   modal.style.display = 'block'
 }
 
 function draw(userChoice, cpuChoice){
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`;
+  result.innerHTML = `<span class="close"></span> <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`;
   modal.style.display = 'block'
 }
 
@@ -80,8 +81,15 @@ function main() {
 
 
 function clearModal(e){
+  closeBtn = document.querySelector('.close');
+
   if(e.target == modal) {
     modal.style.display = "none"
+  }
+  else if(closeBtn){
+    closeBtn.addEventListener('click', function(){
+      modal.style.display = "none"
+    });
   }
 }
 
@@ -92,7 +100,6 @@ function restartGame(){
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
 }
-
 
 restart.addEventListener('click', restartGame);
 window.addEventListener('click', clearModal);
