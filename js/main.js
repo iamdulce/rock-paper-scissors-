@@ -19,12 +19,13 @@ function getCpuChoice() {
 }
 
 
+
 function win(userChoice, cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
   result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`;
-  modal.style.display = 'block';
+  modal.style.display = 'flex';
 }
 
 function lose(userChoice, cpuChoice){
@@ -32,14 +33,14 @@ function lose(userChoice, cpuChoice){
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
   result.innerHTML = `<span class="close"></span> <h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`; 
-  modal.style.display = 'block'
+  modal.style.display = 'flex'
 }
 
 function draw(userChoice, cpuChoice){
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
   result.innerHTML = `<span class="close"></span> <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`;
-  modal.style.display = 'block'
+  modal.style.display = 'flex'
 }
 
 

@@ -26,6 +26,7 @@
   padding: 20px;
   animation-name: modalopen;
   animation-duration: 1s; 
+  align-self: center;
 }
 
 .modal-content h1{
