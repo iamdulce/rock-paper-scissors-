@@ -19,26 +19,30 @@ function getCpuChoice() {
 }
 
 
-function win(userChoice, cpuChoice) {
+function win(cpuChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`;
+  result.innerHTML = `
+    <span class="close"></span><div><div><h1 class="text-win">You win!</h1><p>Computer choose <strong>${cpuChoice}</strong></p><div><img src="./images/${cpuChoice}.png"/></div>`; 
   modal.style.display = 'block';
 }
 
-function lose(userChoice, cpuChoice){
+function lose(cpuChoice){
   cpuScore++;
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<span class="close"></span> <h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`; 
+  result.innerHTML = `
+  <span class="close"></span> <div><div><h1 class="text-lose">You lost</h1><p>Computer choose <strong>${cpuChoice}</strong></p><div>
+    <img src="./images/${cpuChoice}.png"/></div>`; 
   modal.style.display = 'block'
 }
 
-function draw(userChoice, cpuChoice){
+function draw(cpuChoice){
   userScore_span.innerHTML = userScore;
   cpuScore_span.innerHTML = cpuScore;
-  result.innerHTML = `<span class="close"></span> <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`;
+  result.innerHTML = `
+  <span class="close"></span><div><div><h1>It's a draw</h1><p>You both choose <strong>${cpuChoice}</strong></p><div><img src="./images/${cpuChoice}.png"/></div>`;
   modal.style.display = 'block'
 }
 
@@ -49,17 +53,17 @@ function play(userChoice) {
     case 'rockscissors':
     case 'paperrock':
     case 'scissorspaper':
-      win(userChoice, cpuChoice);
+      win(cpuChoice);
       break;
     case 'rockpaper':
     case 'paperscissors':
     case 'scissorsrock':
-      lose(userChoice, cpuChoice);
+      lose(cpuChoice);
       break;
     case 'rockrock':
     case 'paperpaper':
     case 'scissorsscissors':
-      draw(userChoice, cpuChoice);
+      draw(cpuChoice);
       break;
   }
 }
